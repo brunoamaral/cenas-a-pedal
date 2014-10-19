@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+</div><!-- closing the container so that the jumbotron can extend full width -->
+
+<div class="jumbotron destaque">
+  <div class="container">
+    <h1>Isto é um destaque!</h1>
+    <p><a class="btn btn-primary btn-lg" role="button">Saber mais</a></p>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="http://placepuppy.it/300/150" class="img-responsive" alt="">
+    <h3>Aprender a andar de bicicleta</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis !</p>
+  </div>
+  <div class="col-sm-3">
+    <img src="http://placepuppy.it/300/150" class="img-responsive" alt="">
+    <h3>Loja da bicicleta urbana</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita voluptatibus.</p>
+  </div>
+  <div class="col-sm-3">
+    <img src="http://placepuppy.it/300/150" class="img-responsive" alt="">
+    <h3>Oficina de Bicicletas</h3>
+    <p>&nbsp;</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa minus adipisci!</p>
+  </div>
+  <div class="col-sm-3">
+    <img src="http://placepuppy.it/300/150" class="img-responsive" alt="">
+    <h3>Consultoria em mobilidade</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <img src="http://placehold.it/300x100&text=Aluguer+de+bicicletas" alt="">
+  </div>
+  <div class="col-sm-6">
+    <img src="http://placehold.it/300x100&text=Clube+de+Chiclistas" alt="">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h2>Eventos a Pedal</h2>
+    <ul>
+      <li>Só a lista dos próximos eventos</li>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+  </div>
+
+
+  <div class="col-sm-6">
+      <h3 class="page-heading">Posts</h3>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  </div>
+</div>
+
